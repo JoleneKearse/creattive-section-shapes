@@ -1,7 +1,19 @@
-# Notes on Creating Each Creative Background
+# Notes on Creating Section Creative Backgrounds
 
-## Diagonal
-![Nice diagonal linear gradient background!]()
+I've been learning a lot, taking so many classes, and 💯 upping my skills... But my extreme-let's-go-regime has me running on fumes. 😶‍🌫️ 
+
+So happy, fun break-time! 
+
+I open up *YouTube* and what do I see first?  A *Kevin Powell* video offering me feel-good CSS time. 💗
+
+Check out his [Spice up your site | Easy waves, angles & other creative shapes with CSS video on YouTube](https://www.youtube.com/watch?v=hWGgw1K-i8Y) for yourself.
+
+These notes are my hope to remember the steps myself...
+
+## The Designs
+
+### TheDiagonal Design
+![Nice diagonal linear gradient background!](img/diagonal.png)
 
 - Use a class of _.diagonal_ on the section to style up.  For funsies, set the linear gradient to enjoy yourself while applying your CSS magic!
 - Create the _transformation_ on the *pseudo-element*, either `::before` or `::after` - dealer's choice.
@@ -16,4 +28,6 @@ The super-cool new thing I learned was `isolation: isolate;`, which you can appl
 
 A *dev-friendly* tip was to use custom properties for the transform angle and background, so you don't need to scroll through all the kind to see what's happening!
 
-![code block]()
+![code block](img/diagonal-code.png)
+
+### Let's Get Spikey!

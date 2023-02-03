@@ -4,6 +4,10 @@
   box-sizing:border-box;
 }
 
+:root {
+  --body-bg: hsl(0, 0%, 13%);
+}
+
 html {
   color-scheme: dark light;
 }
@@ -13,6 +17,8 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1.25rem;
   line-height: 1.5;
+  color: white;
+  background: var(--body-bg);
 }
 
 .wrapper {
@@ -34,6 +40,11 @@ section {
   padding-block: 5rem;
 }
 
+.buffer {
+  font-size: 2rem;
+  text-align: center;
+}
+
 /* SECTION SPECIFIC STYLES */
 
 .diagonal {
@@ -48,10 +59,43 @@ section {
 
 .diagonal::after {
   content: '';
-  background-image: var(--background);
+  background: var(--background);
   position: absolute;
   /* this is the shortform for top, right, bottom, left */
   inset: 0;
   transform: skewY(var(--skew-angle));
   z-index: -1;
+}
+
+.spikes {
+  --spike-width: 12px;
+  --spike-height: 50px; 
+  --spike-color: var(--body-bg);     
+  position: relative;
+  background: linear-gradient(
+    to right, #fdc830, #f37335
+  );
+  color: black;
+}
+
+.spikes::before,
+.spikes::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: var(--spike-height);
+  background: var(--spike-color);
+  -webkit-mask-image: url('img/triangle.svg');
+  -webkit-mask-size: var(--spike-width) var(--spike-height);
+  mask-image: url('img/triangle.svg');
+  mask-size: var(--spike-width) var(--spike-height);
+}
+
+.spikes::before {
+  top: 0;
+}
+
+.spikes::after {
+  bottom: 0;
+  transform: rotate(.5turn);
 }
