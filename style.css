@@ -37,17 +37,21 @@ section {
 /* SECTION SPECIFIC STYLES */
 
 .diagonal {
+  --skew-angle: -5deg;
+  --background: linear-gradient(
+    45deg, #12c2e9, #c471ed, #f64f59
+  );
   position: relative;
+  /* this property keeps the transform and z-index in it's block */
   isolation: isolate;
 }
 
 .diagonal::after {
   content: '';
-  background-image: linear-gradient(
-    45deg, #12c2e9, #c471ed, #f64f59
-  );
+  background-image: var(--background);
   position: absolute;
+  /* this is the shortform for top, right, bottom, left */
   inset: 0;
-  transform: skewY(-5deg);
+  transform: skewY(var(--skew-angle));
   z-index: -1;
 }
