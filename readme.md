@@ -89,3 +89,14 @@ Usually they'd automatically have a full width, but the absolute positioning cha
 ### Getting Wavy 🌊
 
 **Note:** This method _could_ be used for the spikes, but your control over the final effect would be lessened.
+
+![wavy gradient](img/waves.png)
+
+- Place the linear gradient of your choice on the element.
+- Go to [CSS Generators](https://css-generators.com/wavy-shapes/), choose the **Top + Bottom** option, choose the **Size of the wave**, then adjust the **Curvature of the wave** slider. Click the **Copy the CSS** button.
+
+![Adjust the sides, size and curvature controls on CSS Generators](img/waves1.png)
+
+- Copy it into the selector, removing the selector that came with the copy.  The code is using a `-webkit-mask` and `mask` again.  The custom property of `--mask` sets up radial gradients.
+
+![Super simple code made with a CSS generator](img/waves-code.png)
